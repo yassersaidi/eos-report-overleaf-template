@@ -1,0 +1,97 @@
+\chapter{Réalisation}
+\lhead{\textit{Chapitre \thechapter}}
+\rhead{\textit{Réalisation}}
+
+\section{Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a ullamcorper purus, sit amet cursus turpis. Nullam ipsum nibh, imperdiet vitae hendrerit et, porta sit amet lorem. In eu sem viverra, condimentum enim ac, congue dui. Quisque quis urna et quam vehicula tristique a a dui. Vestibulum euismod malesuada maximus. Vivamus vel lacinia nisi. Suspendisse ac fermentum ante, vel condimentum odio. Praesent ut nibh tempor, condimentum eros sit amet, scelerisque sapien. Nam ut nisl sit amet risus viverra fringilla quis a sapien. Curabitur id quam nisl. Sed volutpat varius neque eget tempor. Proin eget ultrices magna, ullamcorper ultricies leo. Suspendisse vitae ex sit amet dolor venenatis imperdiet non sit amet turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla quis suscipit ipsum. In rhoncus urna a quam eleifend, vitae euismod tellus varius.
+\section{Les outils de développement}
+\subsection{Langage de programmation}
+Le langage de programmation choisi pour notre méthode présentée précédemment s'est concentré sur le langage python
+
+\textbf{Python:}
+
+Python\footnote{https://www.python.org/}est un langage de programmation puissant et facile à apprendre. Il a des données de haut niveau
+structures et permet une approche simple mais efficace de la programmation orientée objet.
+
+Python est un langage de programmation interprété, un langage de script et est un peu lent
+par rapport à d'autres langages compilés en C ou C++ pour faire des calculs. Offres Python
+plusieurs bibliothèques (packages) pour le traitement des données, les calculs matriciels, l'analyse et les données
+visualisation. Pour le Deep Learning, python a des environnements de travail comme caffe, tensorow,
+keras, pytorch. Ces environnements de travail sont très utiles car ils permettent de
+gérer l'algorithme de rétropropagation pour les grands réseaux de neurones, les CNN, les U-net, etc.
+Ils assurent également la parallélisation des calculs sur le GPU. 
+
+Le choix de ce langage présente les avantages suivants :
+\begin{itemize}
+\item C'est totalement gratuit.
+\item  Il est facile à apprendre, lire, comprendre, utiliser et écrire.
+\item Il fonctionne sur tous les principaux systèmes d'exploitation et plates-formes informatiques.
+\end{itemize}
+
+
+\subsection{Environnement de développement}
+Tout entraînement du réseau de neurones nécessite une forte puissance de calcul. Notre méthode est
+basée sur un réseau convolutif profond, qui implique un grand nombre de points à entraîner.
+La formation sur le PC portable aurait également pris beaucoup de temps. Nous avons utilisé Google Colab et Amazon Sagemaker studio.\newline
+
+$\blacksquare$ \textbf{ Google Colab:}
+Google Colaboratory ou Colab, un outil Google simple et gratuit pour vous initier au Deep Learning ou collaborer avec vos collègues sur des projets en science des données \cite{gcolab}. 
+  
+Colab permet :
+\begin{itemize}
+\item de développer des applications en Deep Learning en utilisant des bibliothèques Python populaires telles que Keras, TensorFlow, PyTorch et OpenCV.
+\item  Il est facile à apprendre, lire, comprendre, utiliser et écrire.
+\item d’utiliser un environnement de développement (Jupyter Notebook) qui ne nécessite aucune configuration.
+Mais la fonctionnalité qui distingue Colab des autres services est l’accès à un processeur graphique GPU, totalement gratuitement.
+\end{itemize}
+
+$\blacksquare$ \textbf{ Amazon Sagemaker studio:}
+
+Amazon SageMaker est un service entièrement géré permettant aux développeurs et aux spécialistes des données de créer, former et déployer rapidement et facilement des modèles de machine learning \cite{amazonsm}.
+
+\subsection{Bibliothèques utilisées :}
+Plusieurs bibliothèques ont été utilisées. Dans notre travail, nous avons besoin des bibliothèques suivantes :
+
+\begin{enumerate}
+    \item \textbf{TensorFlow :}
+
+TensorFlow\footnote{https://www.tensorflow.org/} est une plate-forme open source de bout en bout pour l'apprentissage automatique. Il dispose d'un écosystème complet et flexible d'outils, des bibliothèques et des ressources communautaires qui permet aux chercheurs de poussez l'état de l'art en matière de ML et les développeurs créent et déploient facilement des applications basées sur ML.
+
+De nombreuses entreprises utilisent TensorFlow telles que Google, Twitter, Intel et Coca-Cola, il est très apprécié pour ses nombreux bienfaits que nous listons ci-dessous :
+\begin{itemize}
+
+\item Multi-platform (Linux, Mac OS, Windows and even Android and iOS).
+
+\item APIs in Python, C ++, Java.
+
+\item Documentation extrêmement bien fournie avec de nombreux exemples et tutoriels.
+
+\end{itemize}
+\item \textbf{Keras}
+
+Keras\footnote{https://keras.io/} est une API d'apprentissage en profondeur écrite en Python, s'exécutant au-dessus de l'apprentissage automatique plate-forme TensorFlow.
+\item \textbf{SimpleITK} 
+
+SimpleITK\footnote{https://simpleitk.org/} est une interface open source simplifiée de la boîte à outils de segmentation et d'enregistrement Insight. La bibliothèque d'analyse d'images SimpleITK est disponible dans plusieurs langages de programmation, notamment C ++, Python, R...
+
+\item \textbf{Matplotlib}
+Matplotlib\footnote{https://matplotlib.org/} est une bibliothèque de suivi Python 2D qui produit des images de qualité publication dans
+divers formats papier et environnements interactifs sur toutes les plateformes.
+
+\item \textbf{NumPy}
+NumPy\footnote{https://numpy.org/} est une bibliothèque pour le langage de programmation Python, a destinée à manipuler des matrices ou tableaux multidimensionnels, ainsi qu'une grande collection des fonctions mathématiques de haut niveau pour opérer sur ces tableaux.
+
+\item \textbf{Pandas}
+Pandas\footnote{https://pandas.pydata.org/}est une analyse de données open source rapide, puissante, flexible et facile à utiliser.
+
+\item \textbf{Scikit-learn}
+
+Scikit-learn\footnote{https://scikit-learn.org/} est une bibliothèque en Python qui fournit de nombreux algorithmes d'apprentissage. Il comprend des fonctions pour l'estimation de la régression logistique, des algorithmes de classification et des vecteurs de support Machines.
+\end{enumerate}
+
+
+
+\section{Conclusion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a ullamcorper purus, sit amet cursus turpis. Nullam ipsum nibh, imperdiet vitae hendrerit et, porta sit amet lorem. In eu sem viverra, condimentum enim ac, congue dui. Quisque quis urna et quam vehicula tristique a a dui. Vestibulum euismod malesuada maximus. Vivamus vel lacinia nisi. Suspendisse ac fermentum ante, vel condimentum odio. Praesent ut nibh tempor, condimentum eros sit amet, scelerisque sapien. Nam ut nisl sit amet risus viverra fringilla quis a sapien. Curabitur id quam nisl. Sed volutpat varius neque eget tempor. Proin eget ultrices magna, ullamcorper ultricies leo. Suspendisse vitae ex sit amet dolor venenatis imperdiet non sit amet turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla quis suscipit ipsum. In rhoncus urna a quam eleifend, vitae euismod tellus varius.
+
+

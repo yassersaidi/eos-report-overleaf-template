@@ -1,0 +1,129 @@
+    \documentclass[a4paper, 12pt, oneside]{report}
+    \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+    \usepackage[none]{hyphenat}
+    \usepackage{lipsum} 
+    \usepackage{blindtext}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% A choisir l'un des deux packages suivants selon si vous êtes sous Linux ou bien Windows %%%
+    \usepackage[utf8]{inputenc} % linux
+    %\usepackage[latin1]{inputenc} % windows
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+    %\usepackage[english]{babel}
+    \usepackage[english,francais]{babel}
+    \usepackage{pdfpages}
+    \usepackage{tikz}
+    \usepackage{PTSansNarrow}
+    \usepackage[T1]{fontenc}
+    \usepackage{listings}
+    \usepackage{caption}
+    \usepackage{subcaption}
+    \usepackage{tabularx}
+    \usepackage{tablestyles}
+    \usepackage[utf8]{inputenc}
+    \usepackage{algorithm}
+    \usepackage[noend]{algpseudocode}
+    \usepackage{wrapfig}
+    \usepackage{setspace}
+    \usepackage{titlesec}
+    \usepackage{sectsty}
+    \usepackage{arabtex}
+    \usepackage{utf8}
+    \usepackage{dirtytalk}
+    \usepackage[pdftex]{graphicx}
+    %\usepackage{epstopdf} 
+    \usepackage{graphics}
+    \usepackage{graphicx}
+    \usepackage{fancyhdr} 
+    \usepackage{url}
+    \usepackage{textcomp}
+    \usepackage{amsmath}%
+    \usepackage{MnSymbol}%
+    \usepackage{wasysym}%
+    \usepackage[T1]{fontenc}
+    \usepackage{pgfplots}
+    \usepackage{tocbibind}
+    \usepackage{tocloft}
+    \usepackage{xpatch}
+    \usepackage{changepage} %%%%
+    \usepackage{soul}
+    \usepackage{setspace}
+    \usepackage[linkcolor=black,colorlinks=true,citecolor=black,filecolor=black]{hyperref}
+    \usepackage[sorting=none]{biblatex}
+    \bibliography{Sub_Files/Biblatex/references} % Where journals.bib and phd-references.bib are BibTeX databases
+
+    
+    
+    % Entête/ Pieds de page:  \pagestyle{empty}: aucune en-tête et aucun pied de page ne seront affichés.
+    % \pagestyle{plain}: seul le numéro de page est affiché au centre du pied de page.
+    % \pagestyle{headings}: les en-têtes et les pieds de page sont définis automatiquement selon la classe de document utilisée.
+    \usepackage{color, colortbl}
+    \definecolor{Gray}{gray}{0.9}
+    %-----------------------------
+    \usepackage{subfig}
+    %\usepackage{multirow}
+    \usepackage{array,multirow}
+    %------------------------------------
+    %\usepackage{amsmath} Remarque: ce package est utile si vous souhaitez écrire des symboles et des formules mathématiques. 
+    %\usepackage{url}
+    \linespread{1.5}
+    
+    \pagestyle{fancy}
+    \usepackage[Lenny]{fncychap}
+    
+    \tolerance=1
+    \emergencystretch=\maxdimen
+    \hyphenpenalty=10000
+    \hbadness=10000
+    \begin{document}
+    \setcode{utf8}
+    \input{Sub_Files/Cover_Page/1_page_garde}
+    \newpage
+    \input{Sub_Files/2_remerciement}
+    \newpage
+    \input{Sub_Files/3_dedicaces1}
+    \newpage
+    \frontmatter
+    \pagenumbering{roman}
+    \tableofcontents{}
+    \newpage 
+    \input{Sub_Files/6_resume}
+    \listoffigures{}
+    \newpage
+    \listoftables{}
+    \newpage
+    \input{Sub_Files/4_liste_abreviations}
+    \newpage
+    \newcommand{\listequationsname}{Liste des équations}
+    \newlistof{myequations}{equ}{\listequationsname}
+    \newcommand{\myequations}[1]{%
+    \addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}\par}
+    
+    \xpretocmd{\listofmyequations}{\addcontentsline{toc}{chapter}{\listequationsname}}{}{}
+    
+    \listofmyequations
+    \newpage
+    
+    
+    
+    \pagenumbering{arabic}
+    
+    \input{Sub_Files/5_introduction}
+    
+    \input{Chapiters/Chapiter_01/chapitre01}
+    \input{Chapiters/Chapiter_02/chapitre02}
+    \input{Chapiters/Chapiter_03/chapitre03}
+    \input{Chapiters/Chapiter_04/chapitre04}
+    \input{Chapiters/Chapiter_05/chapitre05}
+    \input{Sub_Files/7_conclusion}
+    \clearpage
+    \newpage
+    \addcontentsline{toc}{chapter}{Bibliographie}
+    \printbibliography
+    
+
+    
+    
+    \end{document}
