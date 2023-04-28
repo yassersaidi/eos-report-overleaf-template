@@ -11,6 +11,5 @@
 7. open it, and start your editing.
 
 ### Good luck :smiley:
-Try this 😉➡️ : [Yasser Saidi](https://yasserdx.me)
 
 
